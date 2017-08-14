@@ -1,0 +1,100 @@
+html,body,#all{height:100%;overflow: hidden;}
+body{
+	margin:0;	
+}
+a{
+	text-decoration: none;
+}
+#all{
+	margin:0 auto;
+    width:1366px;
+    position: relative;
+    background:url(img/666.jpg)  no-repeat;
+    cursor: pointer;
+}
+#box{
+	margin:0 auto;
+	width: 1366px;
+	position: relative;	
+}  /*居中显示页面，高度自适应*/
+#all:hover {
+	cursor: url(img/Norm_Ice.cur),pointer;
+}
+#little-monsters{
+   position: absolute;
+   left: 48px;
+   top:66px;
+   background: url(img/1.gif) no-repeat;
+   width: 180px;
+   height: 216px;
+}
+#De-lovely{
+   position: absolute;
+   left:120px;
+   top:30px;
+   background: url(img/123.png) no-repeat;
+   width: 100px;
+   height: 98px;
+   font-size: 20px;
+   color: yellow;
+   padding-top: 100px;
+}
+@media all and (max-width: 800px) {
+	#little-monsters{
+		display: none;
+	}
+}
+@media all and (min-width: 800px) {
+	#De-lovely{
+		display: none;
+	}
+}
+/*真正的小怪兽*/
+#wrap{
+	margin-left: 512px;
+	margin-top: 66px;
+	width:  700px;
+	height: 420px;
+	border: 24px solid #01346b;
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px 12px #369;
+	transform-style: preserve-3d;
+	perspective: 800px;
+}
+#wrap div{
+	width: 10px;
+	height: 420px;
+	background: url(img/1.jpg) no-repeat;
+	float: left;
+	transition: .5s;
+}
+.circle{
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+span{
+	position: absolute;
+	font:bold 30px "华文彩云";
+	color: yellow;
+	left: 2000px;
+	top: 300px;
+	white-space: nowrap;
+	animation: move 18s linear infinite;
+	text-shadow: 2px 0 3px blue,3px 0 10px yellow,0 0 30px orange;
+	-webkit-text-stroke: 1px yellow;
+}
+span:hover{
+	animation-play-state: paused;
+}
+@keyframes move{
+	0%{
+		left: 2000px;
+	}
+	100%{
+		left: -600px;
+	}
+}
+/*css3   文字运动*/
